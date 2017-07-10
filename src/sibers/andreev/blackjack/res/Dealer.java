@@ -7,7 +7,6 @@ public class Dealer extends Robots {
     private int chanceTakeCard;
     private boolean isFirstRound;
     private boolean isUser;
-    private String name;
 
     public Dealer(String name) {
         super(name);
@@ -15,9 +14,25 @@ public class Dealer extends Robots {
         this.pointsForContinuation = 16;
         this.chanceTakeCard = 100;
         this.isFirstRound = true;
-        this.name = name;
         isUser = false;
     }
+
+
+    @Override
+    public boolean isFirstRound() {
+        return isFirstRound;
+    }
+
+    @Override
+    public void setFirstRound(boolean firstRound) {
+        isFirstRound = firstRound;
+    }
+
+    @Override
+    public boolean isUser() {
+        return isUser;
+    }
+
 
     @Override
     public int getPointsForStop() {
@@ -34,13 +49,6 @@ public class Dealer extends Robots {
         return chanceTakeCard;
     }
 
-    public void setFirstRound(boolean firstRound) {
-        this.isFirstRound = firstRound;
-    }
-
-    public boolean isFirstRound() {
-        return isFirstRound;
-    }
 
     public String firstToString() {
 

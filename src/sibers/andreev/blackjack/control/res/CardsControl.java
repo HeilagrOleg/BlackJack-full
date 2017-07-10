@@ -1,4 +1,4 @@
-package sibers.andreev.blackjack.control;
+package sibers.andreev.blackjack.control.res;
 
 import sibers.andreev.blackjack.res.Card;
 import sibers.andreev.blackjack.res.Player;
@@ -34,7 +34,7 @@ public class CardsControl {
             deck.remove(deck.size() - 1);
             checkAce(player);
             return new boolean[]{true, true};
-        } else if (player.getPoints() >= player.getPointsForStop()) {
+        } else if (player.getPoints() >= player.getPointsForStop() || player.getPoints()==maxPoints) {
             return new boolean[]{false, true};
         } else {
             int chance = (int) (Math.random() * 100);

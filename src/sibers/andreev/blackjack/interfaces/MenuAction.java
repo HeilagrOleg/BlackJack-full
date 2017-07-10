@@ -25,18 +25,15 @@ public class MenuAction {
         Scanner scanner = new Scanner(System.in);
         String choice = scanner.nextLine();
         if (choice.equals("1")){
-            System.out.printf("Выбор сделан, нажмите любую клавишу%n");
-            scanner.nextLine();
+            System.out.printf("Выбор сделан %n%n");
             return 1;
         }
         if (choice.equals("2")){
-            System.out.printf("Выбор сделан, нажмите любую клавишу%n");
-            scanner.nextLine();
+            System.out.printf("Выбор сделан %n%n");
             return 2;
         }
         if (choice.equals("3")){
-            System.out.printf("Выбор сделан, нажмите любую клавишу%n");
-            scanner.nextLine();
+            System.out.printf("Выбор сделан %n%n");
             return 3;
         } else {
             System.out.printf("Неверная команда%n");

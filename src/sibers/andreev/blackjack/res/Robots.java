@@ -6,13 +6,12 @@ public class Robots extends Player {
     private int pointsForContinuation;
     private int chanceTakeCard;
     private boolean isUser;
-    private String name;
 
     public Robots(String name) {
         super(name);
-        pointsForStop = (int) (17 + Math.random()*19);
-        pointsForContinuation = (int) (10 + Math.random()*16);
-        chanceTakeCard = (int) (25 + Math.random()*75);
+        pointsForStop = 17 + (int) (Math.random() * 19);
+        pointsForContinuation = 10 + (int) (Math.random() * 16);
+        chanceTakeCard = 25 + (int) (Math.random() * 75);
         isUser = false;
     }
 

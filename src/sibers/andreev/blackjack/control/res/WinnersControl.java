@@ -1,4 +1,4 @@
-package sibers.andreev.blackjack.control;
+package sibers.andreev.blackjack.control.res;
 
 import sibers.andreev.blackjack.res.Dealer;
 import sibers.andreev.blackjack.res.Player;
@@ -50,11 +50,12 @@ public class WinnersControl {
         int max = 0;
         for (Player e : testWinnersList) {
             if (e.getPoints() <= maxPoints) {
-                if (e.getPoints() > max) {
+                if (e.getPoints() > max && !e.isLost()) {
                     winnerList.clear();
                     winnerList.add(e);
                     max = e.getPoints();
-                } else if (e.getPoints() == max) {
+                } else if (e.getPoints() == max && !e.isLost()) {
+                    // isLost - когда сдался игрок
                     winnerList.add(e);
                 }
             }
